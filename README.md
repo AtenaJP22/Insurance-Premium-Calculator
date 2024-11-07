@@ -125,22 +125,28 @@ has also been written in the main python file (hw1_2101183.py) but it only
 provides a basic interface for the user through the console so the general
 structure of the system can be viewed. The main testing as stated above, is done
 in the unit test cases.
+
 ● All 3 policies have been tested by asserting whether the premium
 calculated by the calculate_premium method equals the actual value (the actual value was found by the author using mathematical operations and a
 digital calculator.)
+
 ● Adding a policy to a customer instance was tested through
 test_add_policy_to_customer. Like before, the necessary sample data is
 provided and then, it is asserted that the policy has been added to
 past_policies list and the added policy equals the first element of that list.
+
 ● Updating all 3 details of the customer instances one by one, and all at
 once was tested through 4 unit cases (name, age, address, all) by
 asserting the updated attribute being equal to the new value, not the old
 one.
+
 ● The removal of a policy was tested by asserting that the length of the past
 policies list has become one less.
+
 ● The generation of a quote with an example policy, was tested with
 minimum (0) and maximum values (reasonably high) for a LifePolicy
 instance for the base_premium and the coverage_amount.
+
 ● Viewing the past policies itself, was also tested by asserting the policies
 were the same as the ones stored in the policy_list.
 Thus, 10 successful tests were run after a few attempts.
