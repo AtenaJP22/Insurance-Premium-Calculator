@@ -42,6 +42,7 @@ will change in the subclasses. More details such as how the premium is
 calculated in each subclass will be provided later in the documentation.
 
 ● Customer Class
+
 The Customer class has 4 attributes. All of them are private Customer_id
 (integer) is automatically incremented every time a new Customer instance is
 created to ensure uniqueness of the id. The name has a data type of string, like
@@ -60,6 +61,7 @@ As shown in the diagram, all methods of the Customer class are public as they
 are all meant to assist user accessibility.
 
 ● Policy Class
+
 The policy class has an auto-incremented policy_id (to ensure uniqueness) and a
 base_premium of type float. Both are private. The only method of this class is
 calculate_premium which has age: int as its argument and **kwargs meaning
@@ -68,6 +70,7 @@ subclasses of Policy. But it would always return the calculated premium as a
 float. The method is public for user access to premium.
 
 ● The Relationship between Customer and Policy Classes
+
 Before exploring the subclasses, let us take a look at the relationship between
 Customer and the Policy classes. As shown in the UML diagram, They have a
 composition relationship shown by a filed diamond towards Customer. Because a
@@ -77,6 +80,7 @@ Also, a policy instance can only belong to one customer. However, there may be
 a customer without a policy or with multiple policies.
 
 ● The Subclasses of Policy, HealthPolicy
+
 The HealthPolicy class inherits the attributes (policy_id and base_premium) and
 the method from its parent, Policy. So by using super()before its constructor, we
 ensure its inheritance. The extra attribute that HealthPolicy takes is a boolean
@@ -89,6 +93,7 @@ insurance. If the customer has medical conditions, the premium will increase by
 and expensive health care. After the premium is calculated, the float is returned.
 
 ● The Subclasses of Policy, AutoPolicy
+
 AutoPolicy is the other child class of Policy. Just like HealthPolicy, it also inherits
 the policy_id and the age attributes, and the calculate_premium method.
 However, it takes new attributes; driving_record and vehicle_type which are both
@@ -103,6 +108,7 @@ respectively: 20%, 50%, 40%, 60%, 30%. Then, the calculated premium is
 returned.
 
 ● The Subclasses of Policy, LifePolicy
+
 Again, as a child class of Policy, LifePolicy inherits policy_id and base_premium
 attributes and the calculate_premium method. It takes an extra attribute called
 coverage_amount: float. It overrides the calculate_premium method like this,
@@ -113,6 +119,7 @@ As shown in the UML diagram, all the attributes of the subclasses are private an
 the calculate_premium method is always public.
 
 ● Testing
+
 All the unit test cases are performed in test_2101183_hw1.py. A main function
 has also been written in the main python file (hw1_2101183.py) but it only
 provides a basic interface for the user through the console so the general
