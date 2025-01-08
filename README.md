@@ -1,7 +1,7 @@
 # Insurance-Premium-Calculator
 An OOP python app to create a simple system for an insurance company with 3 types of insurance policies; health policy, auto policy, and life policy.
 
-Introduction
+# Introduction
 
 This homework assignment aims to create a simple system for an insurance
 company that has 3 types of insurance policies; health policy, auto policy, and life
