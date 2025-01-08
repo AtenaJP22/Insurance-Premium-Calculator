@@ -17,7 +17,7 @@ shown on the upcoming page to clarify the usage of classes and their attributes
 and the methods, and the relationships between the classes. Additionally, a
 general walkthrough of the system is written below.
 
-● General Walkthrough of the Designed System
+# General Walkthrough of the Designed System
 
 The insurance premium calculator consists of 5 classes in total. The Customer
 class includes customer details and a list of past policies (past_policies). The
@@ -41,7 +41,7 @@ of calculate_premium but the other parameters and the definition of the method
 will change in the subclasses. More details such as how the premium is
 calculated in each subclass will be provided later in the documentation.
 
-● Customer Class
+# Customer Class
 
 The Customer class has 4 attributes. All of them are private Customer_id
 (integer) is automatically incremented every time a new Customer instance is
@@ -60,7 +60,7 @@ has been removed, else, it prints the policy id was not found and returns False.
 As shown in the diagram, all methods of the Customer class are public as they
 are all meant to assist user accessibility.
 
-● Policy Class
+# Policy Class
 
 The policy class has an auto-incremented policy_id (to ensure uniqueness) and a
 base_premium of type float. Both are private. The only method of this class is
@@ -69,7 +69,7 @@ that the other arguments and the definition of the method will be overridden in 
 subclasses of Policy. But it would always return the calculated premium as a
 float. The method is public for user access to premium.
 
-● The Relationship between Customer and Policy Classes
+# The Relationship between Customer and Policy Classes
 
 Before exploring the subclasses, let us take a look at the relationship between
 Customer and the Policy classes. As shown in the UML diagram, They have a
@@ -79,7 +79,7 @@ respective customer instance and the policy cannot exist without a customer.
 Also, a policy instance can only belong to one customer. However, there may be
 a customer without a policy or with multiple policies.
 
-● The Subclasses of Policy, HealthPolicy
+# The Subclasses of Policy, HealthPolicy
 
 The HealthPolicy class inherits the attributes (policy_id and base_premium) and
 the method from its parent, Policy. So by using super()before its constructor, we
@@ -118,7 +118,7 @@ returned.
 As shown in the UML diagram, all the attributes of the subclasses are private and
 the calculate_premium method is always public.
 
-● Testing
+# Testing
 
 All the unit test cases are performed in test_2101183_hw1.py. A main function
 has also been written in the main python file (hw1_2101183.py) but it only
